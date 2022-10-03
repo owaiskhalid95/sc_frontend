@@ -21,7 +21,7 @@ pipeline {
 		stage('upload') {
             steps {
                 sh 'curl -X POST ' +
-                   '-H "x-api-key:${API_KEY}" -H "multipart/form-data" -F "file[]=@target/surefire-reports/FREE CRM Application Test Automation Test Suite/Free CRM App Test Cases.xml" "https://app.calliope.pro/api/v2/profile/${PROFILE_ID}/import/testng?tag[]=myos&tag[]=myplatform&tag[]=mybuild"'
+                   '-H "x-api-key:${API_KEY}" -H "multipart/form-data" -F "file[]=@target/surefire-reports/SpriteClod/SpriteCloud.xml" "https://app.calliope.pro/api/v2/profile/${PROFILE_ID}/import/testng?tag[]=myos&tag[]=myplatform&tag[]=mybuild"'
             }
        }
 
