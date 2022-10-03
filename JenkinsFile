@@ -9,7 +9,7 @@ pipeline {
 	
 	 environment{
         API_KEY = "MmRiOWVjNGZmN2ViZjY1ZmRkZGRjZWUzMjc0OWYyODEzN2NmZWFjNThlZWRhYjlmNjA2YjZmNTg1MDIzN2U5NzA1"
-        PROFILE_ID = "sandbox-of-owais-khalid"
+        PROFILE_ID = "4513"
     }
 
     stages {
@@ -23,8 +23,8 @@ pipeline {
                 sh 'curl -X POST ' +
                    '-H "x-api-key:${API_KEY}" ' +
                   '-H "multipart/form-data" '+
-                  '-F "file[]=@target/surefire-reports/emailable-report.html" ' +
-                   '"https://test.calliope.pro/api/v2/profile/${PROFILE_ID}/import/testng?tag[]=myos&tag[]=myplatform&tag[]=mybuild"'
+                  '-F "file[]=@target/surefire-reports/testng-results" ' +
+                   '"https://app.calliope.pro/api/v2/profile/${PROFILE_ID}/import/testng?tag[]=myos&tag[]=myplatform&tag[]=mybuild"'
             }
        }
 
