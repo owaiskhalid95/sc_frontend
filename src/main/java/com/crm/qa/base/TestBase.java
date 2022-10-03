@@ -49,14 +49,26 @@ public class TestBase {
 		if(browserName.equals("chrome")){
 			WebDriverManager.chromedriver().setup();
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\owaiskhalid\\Desktop\\Desktop\\Code\\chromedriver.exe");
-			driver = new ChromeDriver(); 
+			//driver = new ChromeDriver();
+
+			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--whitelistedip", "--headless", "--disable-gpu",
+					"--window-size=1920,1200", "--ignore-certificate-errors",
+					"--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+			driver = new ChromeDriver(options);
+
+
+
+
+
 		}
 		else if(browserName.equals("FF")){
 			//System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
-		
+
 		
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
