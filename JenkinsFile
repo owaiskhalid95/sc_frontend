@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {               
                  sh "mvn clean test"
-                
+              }  
             }
 		stage('upload') {
             steps {
@@ -30,7 +30,7 @@ pipeline {
 
         }
     }
-}
+
 
 
 
