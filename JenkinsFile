@@ -8,8 +8,8 @@ pipeline {
 	
 	
 	 environment{
-        API_KEY = MmRiOWVjNGZmN2ViZjY1ZmRkZGRjZWUzMjc0OWYyODEzN2NmZWFjNThlZWRhYjlmNjA2YjZmNTg1MDIzN2U5NzA1
-        PROFILE_ID = 3938
+        API_KEY = "MmRiOWVjNGZmN2ViZjY1ZmRkZGRjZWUzMjc0OWYyODEzN2NmZWFjNThlZWRhYjlmNjA2YjZmNTg1MDIzN2U5NzA1"
+        PROFILE_ID = "3938"
     }
 
     stages {
